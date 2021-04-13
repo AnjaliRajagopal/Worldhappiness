@@ -1,5 +1,7 @@
 library(shiny)
+library(ggplot2)
 # Define UI for application that draws a histogram
+happiness=read.csv("https://raw.githubusercontent.com/AnjaliRajagopal/happinessdata/main/world-happiness-report-2021.csv")
 ui <- fluidPage(
     #UI(fluidPage(
     titlePanel('Ladder scores of happiness Vs Indicators of happiness regression'),
@@ -30,7 +32,7 @@ ui <- fluidPage(
 )
 
 server <- (function(input, output) {
-    happiness=read.csv("https://raw.githubusercontent.com/AnjaliRajagopal/happinessdata/main/world-happiness-report-2021.csv")
+    
     
     
     selectedData <- reactive({
