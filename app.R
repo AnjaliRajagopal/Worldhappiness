@@ -50,7 +50,7 @@ server <- (function(input, output) {
     
     output$plot1 <- renderPlot({
         par(mar = c(5.1, 4.1, 0, 1))
-        plot(selectedData())
+        #plot(selectedData())
         if(input$xcol=='Logged.GDP.per.capita'){
             ggplot(happiness,aes(y=Ladder.score, x = Logged.GDP.per.capita))+
                 geom_point()+
