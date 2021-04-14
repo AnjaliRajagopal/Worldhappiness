@@ -54,9 +54,9 @@ server <- (function(input, output) {
         if(input$xcol=='Logged.GDP.per.capita'){
             ggplot(happiness,aes(y=Ladder.score, x = Logged.GDP.per.capita))+
                 geom_point()+
-                geom_smooth(method="gam", se=FALSE)}
+                geom_smooth(method="lm", se=FALSE)}
         if(input$xcol=='Social.support'){
-            ggplot(happiness,aes(y=Ladder.score,x=Social.support))+geom_point()+geom_smooth(method="lm")}
+            ggplot(happiness,aes(y=Ladder.score,x=Social.support))+geom_point()+geom_smooth(method="lm",se=FALSE)}
         
         if(input$xcol=='Healthy.life.expectancy'){
             ggplot(happiness,aes(y=Ladder.score,x=Healthy.life.expectancy))+geom_point()+geom_smooth(method="lm",se=FALSE)}
