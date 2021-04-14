@@ -1,10 +1,13 @@
 library(shiny)
 library(ggplot2)
-# Define UI for application that draws a histogram
+
 happiness=read.csv("https://raw.githubusercontent.com/AnjaliRajagopal/happinessdata/main/world-happiness-report-2021.csv")
+
+
+# Define UI for application that draws a histogram
 ui <- fluidPage(
     #UI(fluidPage(
-    titlePanel('Ladder scores of happiness Vs Indicators of happiness regression'),
+    titlePanel('Violent Crime Rates vs Urban Population in the US'),
     sidebarLayout(
         sidebarPanel(
             selectInput('xcol', 'Select a type of Crime to visualize its relation to percentage of urban population', names(happiness)[c(7,8,9,10,11,12)],
@@ -31,7 +34,8 @@ ui <- fluidPage(
     )
 )
 
-server <- (function(input, output) {
+server <- function(input, output) {
+    
     
     
     
@@ -50,25 +54,28 @@ server <- (function(input, output) {
     
     output$plot1 <- renderPlot({
         par(mar = c(5.1, 4.1, 0, 1))
-        #plot(selectedData())
+        
         if(input$xcol=='Logged.GDP.per.capita'){
             ggplot(happiness,aes(y=Ladder.score, x = Logged.GDP.per.capita))+
                 geom_point()+
                 geom_smooth(method="lm", se=FALSE)}
-        if(input$xcol=='Social.support'){
+        
+        else if(input$xcol=='Social.support'){
             ggplot(happiness,aes(y=Ladder.score,x=Social.support))+geom_point()+geom_smooth(method="lm",se=FALSE)}
         
-        if(input$xcol=='Healthy.life.expectancy'){
+        else if(input$xcol=='Healthy.life.expectancy'){
             ggplot(happiness,aes(y=Ladder.score,x=Healthy.life.expectancy))+geom_point()+geom_smooth(method="lm",se=FALSE)}
-        if(input$xcol=='Freedom.to.make.life.choices'){
+        
+        else if(input$xcol=='Freedom.to.make.life.choices'){
             ggplot(happiness,aes(y=Ladder.score,x=Freedom.to.make.life.choices))+geom_point()+geom_smooth(method="lm",se=FALSE)}
-        if(input$xcol=='Generosity'){
+        
+        else if(input$xcol=='Generosity'){
             ggplot(happiness,aes(y=Ladder.score,x=Generosity))+geom_point()+geom_smooth(method="lm",se=FALSE)}
         
-        if(input$xcol=='Perceptions.of.corruption'){
-            ggplot(happiness,aes(y = Ladder.score, x = Perceptions.of.corruption))+geom_point()+geom_smooth(method="lm",se=FALSE)}
-        
-        
+        else if(input$xcol=='Perceptions.of.corruption'){
+            ggplot(happiness,aes(y = Ladder.score, x = Perceptions.of.corruption))+
+                geom_point()+
+                geom_smooth(method="lm", se=FALSE)}
     })
     
     
@@ -82,5 +89,5 @@ server <- (function(input, output) {
     
     
     
-})
+}
 shinyApp(ui = ui, server = server)
