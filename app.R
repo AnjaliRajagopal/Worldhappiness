@@ -1,16 +1,15 @@
-library(shiny)
-library(ggplot2)
 
+require(ggplot2)
+require(shiny)
 happiness=read.csv("https://raw.githubusercontent.com/AnjaliRajagopal/happinessdata/main/world-happiness-report-2021.csv")
-
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
     #UI(fluidPage(
-    titlePanel('Ladder score of happiness Vs Indicator of happiness'),
+    titlePanel('Ladder.score of happiness Vs Indicators of happiness'),
     sidebarLayout(
         sidebarPanel(
-            selectInput('xcol', 'Select a type of Crime to visualize its relation to percentage of urban population', names(happiness)[c(7,8,9,10,11,12)],
+            selectInput('xcol', 'Select a dependent variable for regression to visualize the regression for world happiness 2021', names(happiness)[c(7,8,9,10,11,12)],
                         selected=names(happiness)[[1]]),
             
             h1(""),
