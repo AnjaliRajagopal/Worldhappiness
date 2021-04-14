@@ -22,4 +22,4 @@ variable is default set as Ladder score.Then the graph would be displayed for co
 #Dataset
 
 The dataset contains the different inidcators of happiness and ladder scores for all the countries in different regions
-of the world.This data is taken from www.kaggle.com/worldhappinessreport2021
+of the world.This data is taken from www.kaggle.com
