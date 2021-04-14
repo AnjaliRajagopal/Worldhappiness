@@ -7,7 +7,7 @@ happiness=read.csv("https://raw.githubusercontent.com/AnjaliRajagopal/happinessd
 # Define UI for application that draws a histogram
 ui <- fluidPage(
     #UI(fluidPage(
-    titlePanel('Violent Crime Rates vs Urban Population in the US'),
+    titlePanel('Ladder score of happiness Vs Indicator of happiness'),
     sidebarLayout(
         sidebarPanel(
             selectInput('xcol', 'Select a type of Crime to visualize its relation to percentage of urban population', names(happiness)[c(7,8,9,10,11,12)],
