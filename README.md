@@ -1,6 +1,6 @@
 # World Happiness Analysis
 
-This App is an interactive application showing the linear regression between the different six indicators of happpiness that is: Logged GDP per capita,
+This App is an interactive application showing the linear regression between the different six indicators of world happpiness that is: Logged GDP per capita,
 Social support,Healthy life expectancy,Freedom to make life choices,Generosity,Perceptions of corruption and Ladder score of happiness.The App takes the independent varibales from user and calculates linear regression for the selected variable
 
 # Packages to be installed
