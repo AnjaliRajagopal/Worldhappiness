@@ -28,5 +28,5 @@ of the world.This data is taken from www.kaggle.com
 runGitHub("Worldhappiness","AnjaliRajagopal","main")
 
 #App layout-World happiness Analysis
-![Capturehappiness](https://user-images.githubusercontent.com/81853539/114745340-d61a7480-9d4e-11eb-8151-fc14389739a4.PNG)
+
 
