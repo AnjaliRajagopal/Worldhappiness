@@ -6,12 +6,15 @@ Social support,Healthy life expectancy,Freedom to make life choices,Generosity,P
 Packages to be installed
 
 require(shiny)
+
 require(ggplot2)
 
 Usage
 
 Load the packages
+
 require(shiny)
+
 require(ggplot2)
 
 User inputs
@@ -31,7 +34,9 @@ install(shiny)
 
 runGitHub("Worldhappiness","AnjaliRajagopal","main")
 
-#App layout-World happiness Analysis
+# World Happiness Analysis App
+
+
 ![finalfinal](https://user-images.githubusercontent.com/81853539/114901249-e6952280-9e14-11eb-90d8-d9eee00c1971.PNG)
 
 
