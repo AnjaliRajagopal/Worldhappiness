@@ -1,4 +1,5 @@
 
+
 require(ggplot2)
 require(shiny)
 library(rmarkdown)
@@ -11,9 +12,9 @@ ui <-shinyUI(fluidPage(
     sidebarLayout(
         sidebarPanel(
             selectInput('xcol', 'Select a dependent variable for regression to visualize the regression for world happiness 2021', names(happiness)[c(7,8,9,10,11,12)],
-                        selected=names(happiness)[[1]]),
+                        selected=names(happiness)[[1]])
             
-            h1(""),
+           
             
             
             
@@ -22,24 +23,24 @@ ui <-shinyUI(fluidPage(
         mainPanel(
             
             tabsetPanel(type="tab",
-                        tabPanel("TABLE",h4("Source: 'World happiness report 2021' dataset from kaggle.com."),tableOutput('table1')
-                        ),
+                      
                         tabPanel("PLOT",
-                       
-            
-            h4("The chart shows Ladder score of happiness in all countries vs the six indicators of happiness."),
-           
-            h4("A linear regression model is calculated for each indicator of happiness."),
-            plotOutput("plot1")),
-            tabPanel("SUMMARY",h4("summary of regression"),verbatimTextOutput(outputId = "RegSum")
-            )
-            
-            
-            
+                                 
+                                 h4("The chart shows Ladder score of happiness in all countries vs the six indicators of happiness."),
+                                 
+                                 h4("A linear regression model is calculated for each indicator of happiness."),
+                                 plotOutput("plot1"),
+                                 h4("Source: 'World happiness report 2021' dataset from kaggle.com."),tableOutput('table1')
+                        ),
+                        tabPanel("SUMMARY",h4("summary of regression"),verbatimTextOutput(outputId = "RegSum")
+                        )
+                        
+                        
+                        
             )
         )
-    )
-))
+    ))
+)
 
 server <- function(input, output) {
     
