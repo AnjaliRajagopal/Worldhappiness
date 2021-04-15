@@ -1,4 +1,4 @@
-World Happiness report Analysis
+#World Happiness report Analysis
 
 This App is an interactive application showing the regression between the different six indicators of happpiness that is Logged GDP per capita,
 Social support,Healthy life expectancy,Freedom to make life choices,Generosity,Perceptions of corruption and Ladder score of happiness.
@@ -22,7 +22,7 @@ The summary tab displays the linear regression of dependent and independent vari
 
 Dataset
 
-The dataset contains the different inidcators of happiness and ladder scores for all the countries in different regions
+The dataset contains the different indicators of happiness and ladder scores for all the countries in different regions
 of the world.This data is taken from www.kaggle.com
 
 To run the app directly from console 
