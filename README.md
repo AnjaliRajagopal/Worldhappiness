@@ -34,7 +34,7 @@ install(shiny)
 
 runGitHub("Worldhappiness","AnjaliRajagopal","main")
 
-# World Happiness Analysis App
+# World Happiness Analysis App Layout
 
 
 ![finalfinal](https://user-images.githubusercontent.com/81853539/114901249-e6952280-9e14-11eb-90d8-d9eee00c1971.PNG)
