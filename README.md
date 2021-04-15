@@ -28,6 +28,7 @@ of the world.This data is taken from www.kaggle.com
 To run the app directly from console 
 
 install(shiny)
+
 runGitHub("Worldhappiness","AnjaliRajagopal","main")
 
 #App layout-World happiness Analysis
