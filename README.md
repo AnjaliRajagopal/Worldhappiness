@@ -1,4 +1,4 @@
-#World Happiness report Analysis
+##World Happiness report Analysis
 
 This App is an interactive application showing the regression between the different six indicators of happpiness that is Logged GDP per capita,
 Social support,Healthy life expectancy,Freedom to make life choices,Generosity,Perceptions of corruption and Ladder score of happiness.
