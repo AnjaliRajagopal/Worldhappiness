@@ -3,7 +3,7 @@
 require(ggplot2)
 require(shiny)
 library(rmarkdown)
-happiness=read.csv("https://raw.githubusercontent.com/AnjaliRajagopal/happinessdata/main/world-happiness-report-2021.csv")
+happiness=read.csv("https://raw.githubusercontent.com/AnjaliRajagopal/Worldhappiness/main/world-happiness-report-2021.csv")
 
 # Define UI for application that draws a histogram
 ui <-shinyUI(fluidPage(
