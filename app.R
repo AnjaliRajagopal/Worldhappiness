@@ -1,10 +1,11 @@
 
 require(ggplot2)
 require(shiny)
+library(rmarkdown)
 happiness=read.csv("https://raw.githubusercontent.com/AnjaliRajagopal/happinessdata/main/world-happiness-report-2021.csv")
 
 # Define UI for application that draws a histogram
-ui <- fluidPage(
+ui <-shinyUI(fluidPage(
     #UI(fluidPage(
     titlePanel('Ladder.score of happiness Vs Indicators of happiness'),
     sidebarLayout(
@@ -14,24 +15,31 @@ ui <- fluidPage(
             
             h1(""),
             
-            tableOutput('table1'),
+            
             
             
         ),
         mainPanel(
             
+            tabsetPanel(type="tab",
+                        tabPanel("TABLE",h4("Source: 'World happiness report 2021' dataset from kaggle.com."),tableOutput('table1')
+                        ),
+                        tabPanel("PLOT",
+                       
             
-            h5("The chart shows Ladder score of happiness in all countries vs the six indicators of happiness."),
-            h5("Source: 'World happiness report 2021' dataset from kaggle.com."),
-            h5("A linear regression model is calculated for each indicator of happiness."),
-            plotOutput("plot1"),
-            h4("summary of regression"),
-            verbatimTextOutput(outputId = "RegSum"),
+            h4("The chart shows Ladder score of happiness in all countries vs the six indicators of happiness."),
+           
+            h4("A linear regression model is calculated for each indicator of happiness."),
+            plotOutput("plot1")),
+            tabPanel("SUMMARY",h4("summary of regression"),verbatimTextOutput(outputId = "RegSum")
+            )
             
             
+            
+            )
         )
     )
-)
+))
 
 server <- function(input, output) {
     
